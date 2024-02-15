@@ -1,0 +1,12 @@
+{
+    "Lua.workspace.library": [
+        "C:/Users/ierdn/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/StormworksAddonLua/module/library"
+    ],
+    "Lua.diagnostics.disable": [
+        "lowercase-global"
+    ],
+    "Lua.diagnostics.globals": [
+        "g_savedata"
+    ],
+    "Lua.workspace.checkThirdParty": false
+}

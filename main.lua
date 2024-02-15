@@ -353,6 +353,7 @@ function onSpawnAddonComponent(id, name, type, addon_index)
 	end
 end
 
+
 function onVehicleSpawn(id, peer_id, x, y, z, cost)
 	-- If we are vehicle not from Addon and we contain the substring "SRS" in our name, we are train, so track us to see what blocks we may be in.
 	vName = server.getVehicleName(id)
