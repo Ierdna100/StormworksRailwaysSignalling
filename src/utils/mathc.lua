@@ -7,7 +7,7 @@ mathc = {}
 	4  8  12 16
 
 	reference link: https://gamedev.stackexchange.com/a/50968
-]] local a = 4 --[[DOUBLE]] local b = 3 --[[TRIPLE]] local c = 3 
+]]
 function mathc.EulerFromTransform(matrix)
 	if matrix[1] == 1 or matrix[1] == -1 then
 		return { x = math.atan(matrix[9], matrix[15]), y = 0, z = 0 }
