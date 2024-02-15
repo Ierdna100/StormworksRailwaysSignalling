@@ -8,10 +8,10 @@ function onCreate(firstLoad)
 			Short blocks: every signal is spawned, block distance depends on island size
 			Longer blocks: Only half of all signals are spawned (for modern signals, only half the signal boxes are spawned in semaphore signals)
 		]]
-		newSettings.blockLengthDonkk = property.checkbox("Longer blocks on Donkk Islands", false)
-		newSettings.blockLengthSawyer = property.checkbox("Longer blocks on Sawyer Islands", false)
-		newSettings.blockLengthArid = property.checkbox("Longer blocks on Arid Islands", false)
-		newSettings.blockLengthBridges = property.checkbox("Longer blocks on bridges connecting islands", true)
+		newSettings.longBlocksDonkk = property.checkbox("Longer blocks on Donkk Islands", false)
+		newSettings.longBlocksSawyer = property.checkbox("Longer blocks on Sawyer Islands", false)
+		newSettings.longBlocksArid = property.checkbox("Longer blocks on Arid Islands", false)
+		newSettings.longBlocksBridges = property.checkbox("Longer blocks on bridges connecting islands", true)
 
 		-- If bridges are signalled at all
 		newSettings.enableBridgeSignalling = property.checkbox("Enable bridge signalling (may take a few minutes to spawn in all signals)", true)
