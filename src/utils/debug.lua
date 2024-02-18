@@ -75,6 +75,8 @@ function __serializeTableToJSON(t)
 			JSON = JSON .. kname .. '"' .. v .. '"' .. ","
 		elseif vtype == "boolean" then
 			JSON = JSON .. kname .. (v and 'true' or 'false') .. ","
+		elseif vtype == "function" then
+			JSON = JSON .. kname .. '"func",'
 		elseif vtype == "table" then
 			local blockData, isList = __serializeTableToJSON(v)
 			if isList then

@@ -1,6 +1,6 @@
 function onCreate(firstLoad)
+	log("INITIALIZED")
 	--server.httpGet(666, "/restart") for ierdna's pesonal http debugger, sends on http://localhost:666/restart
-
 	if firstLoad then
 		newSettings = {}
 
@@ -32,8 +32,16 @@ function onCreate(firstLoad)
             newSettings.allowChatCTC = true
         end
 
+		---@type g_savedata
 		g_savedata = {
-			settings = newSettings
+			settings = newSettings,
+			blocks = {},
+			trains = {}
 		}
 	end
+
+	g_savedata.blocks = {}
+	g_savedata.trains = {}
+
+	initializeBlocks()
 end

@@ -1,5 +1,5 @@
 {
 	"ignoreFiles": [],
 	"ignoreComments": true,
-	"deleteSpaces": false
+	"deleteSpaces": true
 }

@@ -8,5 +8,6 @@
     "Lua.diagnostics.globals": [
         "g_savedata"
     ],
-    "Lua.workspace.checkThirdParty": false
+    "Lua.workspace.checkThirdParty": false,
+    "stylua.targetReleaseVersion": "latest"
 }

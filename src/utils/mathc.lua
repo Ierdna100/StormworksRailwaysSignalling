@@ -1,3 +1,12 @@
+---@class Vector3
+---@field x number
+---@field y number
+---@field z number
+
+---@class Vector2
+---@field x number
+---@field y number
+
 mathc = {}
 
 --[[ transform matrices in SW is formatted as such (indices shown):
@@ -8,7 +17,9 @@ mathc = {}
 
 	reference link: https://gamedev.stackexchange.com/a/50968
 ]]
-function mathc.EulerFromTransform(matrix)
+---@param matrix Transform
+---@return Vector3
+function mathc.eulerFromTransform(matrix)
 	if matrix[1] == 1 or matrix[1] == -1 then
 		return { x = math.atan(matrix[9], matrix[15]), y = 0, z = 0 }
 	else
@@ -17,16 +28,23 @@ function mathc.EulerFromTransform(matrix)
 end
 
 -- Simple angle (radians) to vector2
-function mathc.AngleToVec2(angle)
+---@param angle number
+---@return Vector2
+function mathc.angleToVec2(angle)
 	return { x = math.cos(angle), y = math.sin(angle) }
 end
 
--- Simpele dotP
-function mathc.DotProduct2D(vec1, vec2)
+---Simple dotP
+---@param vec1 Vector2
+---@param vec2 Vector2
+---@return number
+function mathc.dotProduct2D(vec1, vec2)
 	return vec1.x * vec2.x + vec1.y * vec2.y
 end
 
--- vec3d1 - vec3d2
-function mathc.Vec3Subtract(vec1, vec2)
+---@param vec1 Vector3
+---@param vec2 Vector3
+---@return Vector3
+function mathc.vec3Subtract(vec1, vec2)
 	return { x = vec1.x - vec2.x, y = vec1.y - vec2.y, z = vec1.z - vec2.z }
 end
